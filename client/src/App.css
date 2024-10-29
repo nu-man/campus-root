@@ -1,0 +1,39 @@
+.blog {
+  font-family: "Inter", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; /* Keeps the logo and nav options on opposite ends */
+  height: 80px;
+  width: 100%;
+}
+
+.nav-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+
+
+
+
+.nav-options a {
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 700;
+  line-height: 19px;
+  size: 16px; 
+  opacity: 60%;
+ color: #3b3f76; /* Add horizontal margin */
+   
+  
+}
+
+.nav-options a:hover {
+ opacity: 1;
+ color: #3b3f76;
+}
+
