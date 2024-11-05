@@ -37,3 +37,51 @@
  color: #3b3f76;
 }
 
+.hero-section{
+  height: fit-content;
+  background: linear-gradient(to right, rgba(209, 206, 241, 1), rgba(255, 255, 255, 1), rgba(207, 250, 247, 1));
+
+
+}
+.hero-heading{
+  text-align: center;
+}
+
+.hero-heading p {
+  color: rgba(48, 51, 99, 1);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 48px;
+
+}
+
+.hero-heading span{
+  color: rgba(48, 51, 99, 1) ;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  opacity: .9;
+}
+
+.hero-cards{
+padding-top: 5vh ;
+padding-bottom: 7vh ;
+}
+
+.moving-cards{
+  margin-left: 50px;
+}
+.moving-cards h5{
+  color: rgba(48, 51, 99, 1);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 48px;
+  
+}
+.moving-cards span{
+  color:rgba(48, 51, 99, 0.5);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 48px;
+  
+}
