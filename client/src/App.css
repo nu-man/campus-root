@@ -4,8 +4,9 @@
 
 .navbar {
   display: flex;
-  align-items: center; 
-  justify-content: space-between; /* Keeps the logo and nav options on opposite ends */
+  align-items: center;
+  justify-content: space-between;
+  /* Keeps the logo and nav options on opposite ends */
   height: 80px;
   width: 100%;
 }
@@ -14,7 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
- 
+
 }
 
 
@@ -25,25 +26,27 @@
   margin: 0 15px;
   font-weight: 700;
   line-height: 19px;
-  size: 16px; 
+  size: 16px;
   opacity: 60%;
- color: #3b3f76; /* Add horizontal margin */
-   
-  
+  color: #3b3f76;
+  /* Add horizontal margin */
+
+
 }
 
 .nav-options a:hover {
- opacity: 1;
- color: #3b3f76;
+  opacity: 1;
+  color: #3b3f76;
 }
 
-.hero-section{
+.hero-section {
   height: fit-content;
   background: linear-gradient(to right, rgba(209, 206, 241, 1), rgba(255, 255, 255, 1), rgba(207, 250, 247, 1));
 
 
 }
-.hero-heading{
+
+.hero-heading {
   text-align: center;
 }
 
@@ -55,33 +58,149 @@
 
 }
 
-.hero-heading span{
-  color: rgba(48, 51, 99, 1) ;
+.hero-heading span {
+  color: rgba(48, 51, 99, 1);
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
   opacity: .9;
 }
 
-.hero-cards{
-padding-top: 5vh ;
-padding-bottom: 7vh ;
+.hero-cards {
+  padding-top: 5vh;
+  padding-bottom: 7vh;
 }
 
-.moving-cards{
-  margin-left: 50px;
+.moving-cards {
+  margin-left: 40px;
+  margin-top: 30px;
 }
-.moving-cards h5{
+
+.moving-cards h5 {
   color: rgba(48, 51, 99, 1);
   font-size: 44px;
   font-weight: 700;
   line-height: 48px;
-  
 }
-.moving-cards span{
-  color:rgba(48, 51, 99, 0.5);
+
+.moving-cards span {
+  color: rgba(48, 51, 99, 0.5);
   font-size: 44px;
   font-weight: 700;
   line-height: 48px;
+}
+
+
+
+.main-content {
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+.main-content h5 {
+  color: rgba(48, 51, 99, 1);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.main-content span {
+  color: rgba(48, 51, 99, 0.5);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.all-blogs {
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+.all-blogs h5 {
+  color: rgba(48, 51, 99, 1);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.all-blogs span {
+  color: rgba(48, 51, 99, 0.5);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.blog-card {
+  border-radius: 20px !important;
+  padding: 20px;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 30px; /* Ensures even spacing between elements */
+}
+
+.blog-card h3 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 47.33px;
+  text-align: left;
+  margin-bottom: 15px; /* Add some space below the title */
+}
+
+.blog-card p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.66px;
+  text-align: left;
+  margin-bottom: auto; /* Expands to push the button down */
+}
+
+.blog-card h6 {
+  background: rgba(59, 63, 118, 1);
+  width: 130px;
+  border-radius: 10px;
+  padding: 8px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.footer{
+  background:rgba(28, 31, 64, 1);
+  color: white;
+  width: 100%;
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .moving-cards {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .moving-cards h5 {
+    font-size: 32px; /* Reduce font size for smaller screens */
+    line-height: 40px;
+  }
+
+  .moving-cards span {
+    font-size: 32px;
+    line-height: 40px;
+  }
   
+  .moving-cards img {
+    width: 100%; /* Scale images to be more flexible */
+    max-width: 200px; /* Limit the max width on smaller screens */
+    margin-right: 10px; /* Reduce gap between images */
+  }
 }
