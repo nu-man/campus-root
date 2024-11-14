@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import campusImage from "../images/campus.png";
 import searchImage from "../images/search.png";
 import loginImage from "../images/login-signup.png";
@@ -20,60 +19,18 @@ import pic4 from "../images/mainContent/pic4.png";
 import pic5 from "../images/mainContent/pic5.png";
 import mvpic1 from "../images/movingCards/mvpic1.png";
 import mvpic2 from "../images/movingCards/mvpic2.png";
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
-import { AiFillApple, AiFillAndroid } from 'react-icons/ai';
+import google from "../images/google.png";
+import apple from "../images/istore.png";
 
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
+import { BsEnvelope, BsTelephone } from "react-icons/bs";
 function Blog() {
-  const cardData = [
-    {
-      title: "5 Top academic success strategies to study abroad",
-      description:
-        "Studying abroad offers more than just academic knowledge; it's a pathway to developing crucial life skills.",
-      tags: [
-        "Making time management a priority",
-        "Embrace cultural integration",
-      ],
-    },
-    {
-      title: "How to crack GRE and GMAT",
-      description:
-        "The full form of (GRE) is Graduate record examinations. It is a standard test that is taken for admissions.",
-      tags: ["GRE slot booking", "Types of GRE exam", "GRE exam fees"],
-    },
-    {
-      title: "Tips to manage studies and social life",
-      description:
-        "Every student must learn the balance between academics and personal life for overall success.",
-      tags: ["Balancing academics", "Building social network"],
-    },
-    // Add more cards as needed
-  ];
-
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
   return (
     <>
       <Container className="blog">
@@ -211,13 +168,14 @@ function Blog() {
             </div>
           </Container>
         </div>
+
         <div className=" moving-cards">
           <h5>
             Most viewed <span>Blogs</span>
           </h5>
           <div className="d-flex justify-content-center align-items-center">
             <img src={mvpic1} alt="Image 1" style={{ marginRight: "20px" }} />
-            <img src={mvpic1} alt="Image 2" />
+            <img src={mvpic2} alt="Image 2" />
           </div>
         </div>
         <div className="main-content">
@@ -230,8 +188,8 @@ function Blog() {
               xs={12}
               sm={12}
               md={12}
-              lg={3} // Full width on extra-small screens
-              className="d-flex justify-content-center align-items-center mb-3"
+              lg={4} // Full width on extra-small screens
+              className="d-flex justify-content-center align-items-center "
             >
               <img
                 src={pic1}
@@ -247,14 +205,14 @@ function Blog() {
             </Col>
 
             {/* Column 2 with 3 rows */}
-            <Col xs={12} sm={6} md={4} lg={3} className="mb-3">
+            <Col xs={12} sm={4} md={4} lg={4} className="mb-3">
               <Row>
                 <img
                   src={pic2}
                   alt="pic"
                   style={{
                     width: "100%",
-                    maxHeight: "120px",
+                    maxHeight: "165px",
                     aspectRatio: "1 / 1.4",
                     objectFit: "contain",
                     marginBottom: "10px",
@@ -267,7 +225,7 @@ function Blog() {
                   alt="pic"
                   style={{
                     width: "100%",
-                    maxHeight: "120px",
+                    maxHeight: "165px",
                     aspectRatio: "1 / 1.4",
                     objectFit: "contain",
                     marginBottom: "10px",
@@ -280,7 +238,7 @@ function Blog() {
                   alt="pic"
                   style={{
                     width: "100%",
-                    maxHeight: "120px",
+                    maxHeight: "165px",
                     aspectRatio: "1 / 1.4",
                     objectFit: "contain",
                     marginBottom: "10px",
@@ -294,8 +252,8 @@ function Blog() {
               xs={12}
               sm={12}
               md={12}
-              lg={3} // Full width on extra-small screens
-              className="d-flex justify-content-center align-items-center mb-3"
+              lg={4} // Full width on extra-small screens
+              className="d-flex justify-content-center align-items-center"
             >
               <img
                 src={pic5}
@@ -375,7 +333,7 @@ function Blog() {
               </Card>
             </Col>
           </Row>
-          <Row>
+          <Row className="last-row">
             <Col sm={6} md={6} lg={6}>
               <Card
                 className="blog-card"
@@ -406,66 +364,109 @@ function Blog() {
             </Col>
           </Row>
         </div>
-        <div className="footer">
+      </Container>
+      <div className="footer">
         <Row>
-          <Col md={2}>
-            <h5>Popular countries</h5>
-            <ul className="list-unstyled">
-              <li>Australia</li>
-              <li>Canada</li>
-              <li>Ireland</li>
-              <li>New Zealand</li>
-              <li>UK</li>
-              <li>US</li>
-            </ul>
-          </Col>
-          <Col md={2}>
-            <h5>Popular Courses</h5>
-            <ul className="list-unstyled">
-              <li>Management</li>
-              <li>Computers</li>
-              <li>Engineering</li>
-              <li>Science</li>
-            </ul>
-          </Col>
           <Col md={3}>
-            <h5>Terms and Policies</h5>
-            <ul className="list-unstyled">
-              <li>Privacy Policy</li>
-              <li>Terms & Condition</li>
-              <li>Disclaimer</li>
-            </ul>
-          </Col>
-          <Col md={2}>
-            <h5>Contact us</h5>
-            <ul className="list-unstyled">
-              <li>Email</li>
-              <li>Phone no</li>
-            </ul>
-          </Col>
-          <Col md={3}>
-            <h5>Install App</h5>
+            <h2>one window</h2>
+            <p>
+              <BsTelephone />
+              <span className="m-2"> 09154898944</span>
+            </p>
+            <p>
+              <BsEnvelope />
+              <span className="m-2"> info@onewindow.co</span>
+            </p>
+            <h5 className="mt-5"> Download our App</h5>
             <div>
-              <AiFillApple size={30} className="mr-2" />
-              <AiFillAndroid size={30} />
+              <img
+                src={google}
+                alt="Google Play"
+                style={{ width: "130px", marginRight: "10px" }}
+              />
+              <img
+                src={apple}
+                alt="App Store"
+                style={{ width: "100px", marginRight: "10px" }}
+              />
             </div>
           </Col>
+
+          <Col md={9}>
+            <Row className="justify-content-end">
+              <Col md={2}>
+                <h5>Hand Book</h5>
+                <ul className="list-unstyled">
+                  <li>Masters Hand Book</li>
+                  <li>Bachelors Hand Book</li>
+                  <li>Visa Cheat Sheet</li>
+                </ul>
+              </Col>
+
+              <Col md={2}>
+                <h5>Quick Links</h5>
+                <ul className="list-unstyled">
+                  <li>Blogs</li>
+                  <li>Courses</li>
+                  <li>Countries</li>
+                  <li>Test Prep</li>
+                  <li>IELTS</li>
+                  <li>Scholarship</li>
+                  <li>Events</li>
+                  <li>Resources</li>
+                  <li>Alumni Connect</li>
+                  <li>SOP Rivew</li>
+                </ul>
+              </Col>
+
+              <Col md={2}>
+                <h5>Study Abroad</h5>
+                <ul className="list-unstyled">
+                  <li>Study in USA</li>
+                  <li>Study in Canada</li>
+                  <li>Study in UK</li>
+                  <li>Study in Australia</li>
+                  <li>Study in New Zealand</li>
+                  <li>Study in France</li>
+                  <li>Study in Netherlands</li>
+                  <li>Study in Itlay</li>
+                  <li>Study in Singapore</li>
+                  <li>Study in Dubai</li>
+                  <li>Study in Europe</li>
+                </ul>
+              </Col>
+
+              <Col md={2}>
+                <h5>Support</h5>
+                <ul className="list-unstyled">
+                  <li>About Us</li>
+                  <li>Contact Us</li>
+                  <li>Services</li>
+                  <li>Careers</li>
+                  <li>Financial Award Policy</li>
+                  <li>Refund Policy</li>
+                  <li>Privacy Policy</li>
+                  <li>Terms & Conditions</li>
+                </ul>
+              </Col>
+            </Row>
+          </Col>
         </Row>
+
         <hr className="bg-light" />
-        <Row>
-          <Col md={6} className="text-center text-md-left">
-            <p>© Copyright 2023, All rights reserved</p>
-          </Col>
-          <Col md={6} className="text-center text-md-right">
-            <FaFacebook size={20} className="mx-2" />
-            <FaTwitter size={20} className="mx-2" />
-            <FaInstagram size={20} className="mx-2" />
-            <FaLinkedin size={20} className="mx-2" />
-            <FaYoutube size={20} className="mx-2" />
-          </Col>
-        </Row>
-        </div>
-      </Container>
+
+        <Col className="text-center text-md-right ">
+          <span className="follow-us">Follow us on:</span>
+          <FaYoutube size={20} className="mx-3" />
+          <FaInstagram size={20} className="mx-3" />
+          <FaLinkedin size={20} className="mx-3" />
+          <FaTwitter size={20} className="mx-3" />
+          <FaFacebook size={20} className="mx-3" />
+        </Col>
+      </div>
+      <div className="copyright">
+        <p>Copyright One Window Education Pvt.Ltd2024. All Right Reserved.</p>
+      </div>
     </>
   );
 }
