@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "slick-carousel/slick/slick.css";
@@ -30,7 +30,21 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { BsEnvelope, BsTelephone } from "react-icons/bs";
+import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+
 function Blog() {
+  const scrollRef = useRef();
+  // Function to handle scrolling
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const scrollAmount = 200; // Adjust the scroll distance
+      scrollRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <>
       <Container className="blog">
@@ -61,21 +75,22 @@ function Blog() {
                   sm={6}
                   md={4}
                   lg={3}
-                  className="d-flex justify-content-center align-items-center"
+                  className="d-flex justify-content-center align-items-center hero-card"
                 >
-                  <img
-                    src={img1}
-                    alt="img"
-                    style={{
-                      width: "100%",
-                      maxHeight: "620px",
-                      aspectRatio: "1 / 1.4",
-                      objectFit: "contain",
-                      marginBottom: "10px",
-                    }}
-                  />
+                  <div className="image-container">
+                    <img src={img1} alt="img" className="hero-image" />
+                    <div
+                      className="hover-text"
+                      style={{ background: "rgba(254, 204, 197, 1)" }}
+                    >
+                      Being able to communicate in English is essential in
+                      today’s globalized society. English is used worldwide in
+                      academic discourse, business, and communication.
+                    </div>
+                  </div>
                 </Col>
 
+                {/* Column 2 with 4 Smaller Images in a 2x2 Grid */}
                 {/* Column 2 with 4 Smaller Images in a 2x2 Grid */}
                 <Col sm={6} md={4} lg={3}>
                   <Row>
@@ -149,19 +164,19 @@ function Blog() {
                   sm={6}
                   md={4}
                   lg={3}
-                  className="d-flex justify-content-center align-items-center"
+                  className="d-flex justify-content-center align-items-center hero-card"
                 >
-                  <img
-                    src={img6}
-                    alt="img"
-                    style={{
-                      width: "100%",
-                      maxHeight: "620px",
-                      aspectRatio: "1 / 1.4",
-                      objectFit: "contain",
-                      marginBottom: "10px",
-                    }}
-                  />
+                  <div className="image-container">
+                    <img src={img6} alt="img" className="hero-image" />
+                    <div
+                      className="hover-text"
+                      style={{ background: "rgba(222, 224, 253, 1)" }}
+                    >
+                      Studying abroad offers more than just academic knowledge;
+                      it’s a pathway to developing crucial life skills and
+                      intercultural understanding. {" "}
+                    </div>
+                  </div>
                 </Col>
               </Row>
             </div>
@@ -171,9 +186,51 @@ function Blog() {
           <h5>
             Most viewed <span>Blogs</span>
           </h5>
-          <div className="d-flex justify-content-center align-items-center">
-            <img src={mvpic1} alt="Image 1" style={{ marginRight: "20px" }} />
-            <img src={mvpic2} alt="Image 2" />
+          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+            {/* Left Icon */}
+            <button
+              onClick={() => scroll("left")}
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                fontSize: "2rem",
+                color: "#333",
+              }}
+            >
+              <MdChevronLeft />
+            </button>
+
+            {/* Scrollable Container */}
+            <div
+              style={{
+                display: "flex",
+                gap: "1rem",
+                overflowX: "scroll",
+                flexWrap: "nowrap",
+                scrollbarWidth: "none",
+                msOverflowStyle: "none",
+              }}
+              ref={scrollRef}
+            >
+              <img src={mvpic1} alt="Image1" />
+              <img src={mvpic2} alt="Image2" />
+              <img src={mvpic1} alt="Image3" />
+            </div>
+
+            {/* Right Icon */}
+            <button
+              onClick={() => scroll("right")}
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                fontSize: "2rem",
+                color: "#333",
+              }}
+            >
+              <MdChevronRight />
+            </button>
           </div>
         </div>
         <div className="main-content">
