@@ -9,13 +9,19 @@
   /* Keeps the logo and nav options on opposite ends */
   height: 80px;
   width: 100%;
+  margin-left: 30px ;
+  cursor: pointer;
 }
 
 .nav-options {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-left: 30px;
 
+}
+ .login{
+  margin-left: 50px;
 }
 
 
@@ -201,7 +207,7 @@ text-decoration-skip-ink: none;
 .footer .follow-us{
   padding: 4px 0;
   opacity: 0.6;
- margin-left: 67vw ;
+ margin-left: 65vw ;
 }
 
  .copyright{

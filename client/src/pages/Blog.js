@@ -35,15 +35,14 @@ function Blog() {
     <>
       <Container className="blog">
         <div className="navbar">
-          <div>
-            <img src={campusImage} alt="Campus" />
-          </div>
           <div className="nav-options">
-            <img src={searchImage} alt="Search" />
+            <img src={campusImage} alt="Campus" />
             <Link to="#home">Home</Link>
             <Link to="#Explore">Explore</Link>
-            <Link to="#recommendations">Recommendations</Link>
-            <Link to="#community">Community</Link>
+            <Link to="#recommendations">AI Course finder</Link>
+            <img src={searchImage} alt="Search" />
+          </div>
+          <div className="login">
             <img src={loginImage} alt="login" height="39px" width="125px" />
           </div>
         </div>
@@ -168,7 +167,6 @@ function Blog() {
             </div>
           </Container>
         </div>
-
         <div className=" moving-cards">
           <h5>
             Most viewed <span>Blogs</span>
@@ -212,7 +210,7 @@ function Blog() {
                   alt="pic"
                   style={{
                     width: "100%",
-                    maxHeight: "165px",
+                    maxHeight: "150px",
                     aspectRatio: "1 / 1.4",
                     objectFit: "contain",
                     marginBottom: "10px",
@@ -225,7 +223,7 @@ function Blog() {
                   alt="pic"
                   style={{
                     width: "100%",
-                    maxHeight: "165px",
+                    maxHeight: "150px",
                     aspectRatio: "1 / 1.4",
                     objectFit: "contain",
                     marginBottom: "10px",
@@ -238,7 +236,7 @@ function Blog() {
                   alt="pic"
                   style={{
                     width: "100%",
-                    maxHeight: "165px",
+                    maxHeight: "150px",
                     aspectRatio: "1 / 1.4",
                     objectFit: "contain",
                     marginBottom: "10px",
@@ -391,7 +389,6 @@ function Blog() {
               />
             </div>
           </Col>
-
           <Col md={9}>
             <Row className="justify-content-end">
               <Col md={2}>
@@ -452,16 +449,14 @@ function Blog() {
             </Row>
           </Col>
         </Row>
-
         <hr className="bg-light" />
-
         <Col className="text-center text-md-right ">
           <span className="follow-us">Follow us on:</span>
-          <FaYoutube size={20} className="mx-3" />
-          <FaInstagram size={20} className="mx-3" />
-          <FaLinkedin size={20} className="mx-3" />
-          <FaTwitter size={20} className="mx-3" />
-          <FaFacebook size={20} className="mx-3" />
+          <FaYoutube size={20} className="mx-2" />
+          <FaInstagram size={20} className="mx-2" />
+          <FaLinkedin size={20} className="mx-2" />
+          <FaTwitter size={20} className="mx-2" />
+          <FaFacebook size={20} className="mx-2" />
         </Col>
       </div>
       <div className="copyright">
